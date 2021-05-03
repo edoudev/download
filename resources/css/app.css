@@ -5,4 +5,5 @@
 @tailwind utilities;
 
 @import url(waves.css);
+@import url(animations.css);
 @import "~animate.css";

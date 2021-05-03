@@ -35,7 +35,11 @@ class Handler extends ExceptionHandler
     public function register()
     {
         $this->reportable(function (Throwable $e) {
-            //
+            $errors = [
+                'scraper' => 'Une erreur s\'est produite',
+            ];
+
+            return redirect()->back()->withErrors($errors);
         });
     }
 }

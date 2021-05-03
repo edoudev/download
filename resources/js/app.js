@@ -1,20 +1,12 @@
 require("./bootstrap");
 import { App, plugin } from "@inertiajs/inertia-vue";
 import Vue from "vue";
+import VueClipboard from "vue-clipboard2";
 
+Vue.use(VueClipboard);
 Vue.use(plugin);
-Vue.prototype.$route = route;
 
-const files = require.context("./Components/", true, /\.vue$/i);
-files.keys().map(key =>
-    Vue.component(
-        key
-            .split("/")
-            .pop()
-            .split(".")[0],
-        files(key).default
-    )
-);
+Vue.prototype.$route = route;
 
 const el = document.getElementById("app");
 new Vue({

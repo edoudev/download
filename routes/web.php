@@ -7,6 +7,4 @@ Route::get('/', function () {
 })->name('home');
 
 Route::get('/process', fn () => redirect()->route('home'));
-Route::post('/process', 'DownloadController@index')->name('process');
-
-Route::post('/download', 'DownloadController@download')->name('download');
+Route::post('/process', 'MainController@index')->name('process');

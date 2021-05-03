@@ -1,0 +1,14 @@
+/* animations.css */
+
+.spin {
+    animation: 3s linear 0s infinite spin;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
