@@ -2,10 +2,10 @@
   <div class="relative flex flex-col items-center justify-center h-full">
     <div class="px-2 animate__animated animate__fadeIn">
       <div class="flex items-center mx-2 text-nord6">
-        <a :href="$page.props.content.url">
+        <a :href="content.url" target="_blank">
           <div class="w-48 h-full">
             <img
-              :src="$page.props.content.thumbnail"
+              :src="content.thumbnail"
               alt="preview"
               class="object-contain border-4 bg-nord1 border-nord1 rounded-3xl"
               draggable="false"
@@ -13,23 +13,22 @@
           </div>
         </a>
         <div class="flex flex-col justify-center pl-4">
-          <a :href="$page.props.content.url">
+          <a :href="content.url" target="_blank">
             <h1 class="text-xl leading-tight">
-              {{ $page.props.content.title }}
+              {{ content.title }}
             </h1>
           </a>
-          <a :href="$page.props.content.author_url">
+          <a :href="content.author_url" target="_blank">
             <div class="text-base font-bold">
-              {{ $page.props.content.author }}
+              {{ content.author }}
             </div>
           </a>
           <div class="text-lg">
             {{
-              Math.floor($page.props.content.duration / 60) +
+              Math.floor(content.duration / 60) +
               ":" +
               Math.trunc(
-                $page.props.content.duration -
-                  Math.floor($page.props.content.duration / 60) * 60
+                content.duration - Math.floor(content.duration / 60) * 60
               )
                 .toString()
                 .padStart(2, "0")
@@ -47,13 +46,13 @@
         Sélectionnez un format
       </option>
       <option
-        v-for="(format, index) in $page.props.content.formats"
+        v-for="(format, index) in content.formats"
         :key="index"
         :value="format.url"
       >
         {{
           (format.height
-            ? format.height + "p"
+            ? "Vidéo " + format.height + "p"
             : "Audio " + format.abr + "kbps") +
           " - " +
           format.ext
@@ -61,7 +60,7 @@
       </option>
     </select>
     <div
-      class="flex items-center text-lg text-nord5 animate__animated animate__slideInLeft"
+      class="flex items-center text-lg  text-nord5 animate__animated animate__slideInLeft"
     >
       <a
         :href="selectedFormat"
@@ -74,15 +73,15 @@
         copier le lien
       </button>
     </div>
-    <!-- <inertia-link href="/" method="get" class="text-base text-nord4"
-      >convertir autre chose</inertia-link
-    > -->
   </div>
 </template>
 
 <script>
 export default {
   layout: require("../Layouts/App").default,
+  props: {
+    content: Object,
+  },
   data() {
     return {
       selectedFormat: "placeholder",
