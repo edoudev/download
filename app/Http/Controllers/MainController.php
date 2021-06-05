@@ -12,6 +12,8 @@ class MainController extends Controller
     {
         request()->validate([
             'url' => 'required|string|url',
+        ], [
+            'url.url' => 'Veuillez entrer une URL valide.',
         ]);
 
         $errors = [];
