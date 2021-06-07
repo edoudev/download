@@ -61,6 +61,7 @@
     </select>
     <div
       class="flex items-center text-lg  text-nord5 animate__animated animate__slideInLeft"
+      v-if="selectedFormat != 'placeholder'"
     >
       <a
         :href="selectedFormat"
