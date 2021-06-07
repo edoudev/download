@@ -19,7 +19,7 @@ class MainController extends Controller
         $errors = [];
 
         $yt = new YoutubeDl();
-        $yt->setBinPath(env('YOUTUBEDL_BINPATH'));
+        $yt->setBinPath(config('download.youtubedl_binpath'));
 
         $yt = $yt->download(
         Options::create()
