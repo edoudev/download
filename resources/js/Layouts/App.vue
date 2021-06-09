@@ -13,11 +13,20 @@
           style="text-shadow: 0 0 #f472b6"
           >❤️</span
         >
-        par <a href="https://edou.dev/" target="_blank">Edouard</a>
+        par
+        <a
+          href="https://edou.dev/"
+          target="_blank"
+          class="duration-100 hover:text-nord6"
+          >Edouard</a
+        >
       </div>
       <span>
         {{ $page.props.version + " - " }}
-        <a href="https://github.com/yesouisida/download" target="_blank"
+        <a
+          href="https://github.com/yesouisida/download"
+          target="_blank"
+          class="duration-100 hover:text-nord6"
           >Github</a
         >
       </span>
