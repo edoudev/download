@@ -1,5 +1,7 @@
 <template>
-  <div class="w-full min-h-screen antialiased font-roboto bg-nord0">
+  <div
+    class="w-full min-h-screen overflow-hidden antialiased font-roboto bg-nord0"
+  >
     <div class="container px-2 mx-auto">
       <slot></slot>
     </div>
