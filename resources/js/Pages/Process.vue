@@ -1,7 +1,7 @@
 <template>
   <div class="relative flex flex-col items-center justify-center h-full">
     <div class="px-2 animate__animated animate__fadeIn">
-      <div class="flex items-center mx-2 text-nord6">
+      <div class="flex flex-col items-center mx-2 md:flex-row text-nord6">
         <a :href="content.url" target="_blank">
           <div class="w-48 h-full">
             <img
@@ -12,7 +12,7 @@
             />
           </div>
         </a>
-        <div class="flex flex-col justify-center pl-4">
+        <div class="flex flex-col justify-center pt-2 md:pl-4 md:pt-0">
           <a :href="content.url" target="_blank">
             <h1 class="text-xl leading-tight">
               {{ content.title }}
