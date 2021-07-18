@@ -2,7 +2,7 @@
   <div
     class="w-full min-h-screen overflow-hidden antialiased font-roboto bg-nord0"
   >
-    <div class="container px-2 mx-auto">
+    <div class="container relative z-10 px-2 mx-auto">
       <slot></slot>
     </div>
     <div

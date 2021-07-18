@@ -12,7 +12,7 @@
       </div>
       <div
         ref="submit"
-        class="flex w-full max-w-xl  animate__animated animate__fadeIn bg-nord0 text-nord4"
+        class="flex w-full max-w-xl  animate__animated animate__fadeIn text-nord4"
         v-if="!processing"
       >
         <input
@@ -20,7 +20,7 @@
           v-model="url"
           name="url"
           :class="{ 'border-nord11': errors }"
-          class="w-full px-3 py-2 text-xl bg-transparent border-4 border-r-0 shadow-md outline-none  border-nord1 rounded-l-2xl"
+          class="w-full px-3 py-2 text-xl border-4 border-r-0 shadow-md outline-none  bg-nord0 border-nord1 rounded-l-2xl"
           placeholder="Entrez un lien ici"
           required
           autofocus
