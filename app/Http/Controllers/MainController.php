@@ -22,7 +22,7 @@ class MainController extends Controller
         $yt->setBinPath(config('download.youtubedl_binpath'));
 
         $yt = $yt->download(
-        Options::create()
+            Options::create()
             ->downloadPath(Storage::disk('local')->path('/'))
             ->url(request()->url)
             ->skipDownload(true)
@@ -52,11 +52,11 @@ class MainController extends Controller
                     ];
                     break;
                 case 'youtube':
-                    $video['formats'] = array_filter($video['formats'], function ($format) {
-                        if ($format['acodec'] != 'none' && $format['protocol'] == 'https') {
-                            return $format;
-                        }
-                    });
+                    // $video['formats'] = array_filter($video['formats'], function ($format) {
+                    //     if ($format['acodec'] != 'none' && $format['protocol'] == 'https') {
+                    //         return $format;
+                    //     }
+                    // });
 
                     $content = [
                         'formats' => $video['formats'],
@@ -93,6 +93,7 @@ class MainController extends Controller
                 'thumbnail' => $video['thumbnail'],
                 'duration' => $video['duration'],
                 'url' => $video['webpage_url'],
+                'extractor' => $video['extractor'],
             ];
 
             return inertia('Process', compact('content'));
