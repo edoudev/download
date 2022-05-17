@@ -3,10 +3,16 @@ import { App, plugin } from '@inertiajs/inertia-vue';
 import Vue from 'vue';
 import VueClipboard from 'vue-clipboard2';
 
+Vue.mixin({
+  methods: {
+    $route: route,
+    saveBlob: window.saveBlob,
+    slugify: window.slugify,
+  },
+});
+
 Vue.use(VueClipboard);
 Vue.use(plugin);
-
-Vue.prototype.$route = route;
 
 const el = document.getElementById('app');
 new Vue({
