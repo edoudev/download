@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "155956843919f8d6b17f461be568f159",
+    "content-hash": "e75c33200b3b3a1a2d6b65e7bbced9e1",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2243,31 +2243,31 @@
         },
         {
             "name": "norkunas/youtube-dl-php",
-            "version": "v2.1.2",
+            "version": "v2.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/norkunas/youtube-dl-php.git",
-                "reference": "d1f363837986dba503e7b1080cadc8d374764d08"
+                "reference": "173d5e4528cf55dcb6027869f5b9de8154330474"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/norkunas/youtube-dl-php/zipball/d1f363837986dba503e7b1080cadc8d374764d08",
-                "reference": "d1f363837986dba503e7b1080cadc8d374764d08",
+                "url": "https://api.github.com/repos/norkunas/youtube-dl-php/zipball/173d5e4528cf55dcb6027869f5b9de8154330474",
+                "reference": "173d5e4528cf55dcb6027869f5b9de8154330474",
                 "shasum": ""
             },
             "require": {
                 "ext-json": "*",
                 "php": ">=7.4.0",
                 "symfony/filesystem": "^4.4|^5.1|^6.0",
-                "symfony/polyfill-php80": "^1.18",
+                "symfony/polyfill-php80": "^1.26",
                 "symfony/process": "^4.4|^5.1|^6.0"
             },
             "require-dev": {
-                "friendsofphp/php-cs-fixer": "^3.0",
-                "mikey179/vfsstream": "^1.6.7",
-                "phpstan/phpstan": "^1.0",
-                "phpstan/phpstan-phpunit": "^1.0",
-                "symfony/phpunit-bridge": "^5.1.5|^6.0"
+                "mikey179/vfsstream": "^1.6.10",
+                "php-cs-fixer/shim": "^3.9",
+                "phpstan/phpstan": "^1.8",
+                "phpstan/phpstan-phpunit": "^1.1",
+                "symfony/phpunit-bridge": "^6.1"
             },
             "type": "library",
             "extra": {
@@ -2290,16 +2290,17 @@
                     "email": "norkunas.tom@gmail.com"
                 }
             ],
-            "description": "youtube-dl wrapper for php",
+            "description": "youtube-dl / yt-dlp wrapper for php",
             "keywords": [
                 "youtube",
-                "youtube-dl"
+                "youtube-dl",
+                "yt-dlp"
             ],
             "support": {
                 "issues": "https://github.com/norkunas/youtube-dl-php/issues",
-                "source": "https://github.com/norkunas/youtube-dl-php/tree/v2.1.2"
+                "source": "https://github.com/norkunas/youtube-dl-php/tree/v2.2.1"
             },
-            "time": "2022-01-13T08:00:12+00:00"
+            "time": "2023-04-21T03:50:15+00:00"
         },
         {
             "name": "opis/closure",
@@ -8271,5 +8272,5 @@
         "php": "^7.3|^8.0"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.1.0"
+    "plugin-api-version": "2.3.0"
 }
