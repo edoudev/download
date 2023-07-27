@@ -22,11 +22,11 @@ class MainController extends Controller
         $yt->setBinPath(config('download.youtubedl_binpath'));
 
         $yt = $yt->download(
-        Options::create()
-            ->downloadPath(Storage::disk('local')->path('/'))
-            ->url(request()->url)
-            ->skipDownload(true)
-            ->output(time())
+            Options::create()
+                ->downloadPath(Storage::disk('local')->path('/'))
+                ->url(request()->url)
+                ->skipDownload(true)
+                ->output(time())
         );
 
         $video = $yt->getVideos()[0];
@@ -64,7 +64,7 @@ class MainController extends Controller
                         'author' => $video['channel'],
                         'author_url' => $video['channel_url'],
                     ];
-                break;
+                    break;
                 case 'soundcloud':
                     $video['formats'] = array_filter($video['formats'], function ($format) {
                         return $format['protocol'] === 'http';
