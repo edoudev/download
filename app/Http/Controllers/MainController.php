@@ -53,7 +53,7 @@ class MainController extends Controller
                     break;
                 case 'youtube':
                     $video['formats'] = array_filter($video['formats'], function ($format) {
-                        if ($format['acodec'] != 'none' && $format['protocol'] == 'https') {
+                        if (array_key_exists('acodec', $format) && $format['acodec'] != 'none' && $format['protocol'] == 'https') {
                             return $format;
                         }
                     });
